@@ -1,0 +1,6 @@
+"column name",width,datatype
+name,20,TEXT
+alpha,5,INTEGER
+beta,5,INTEGER
+beep,1,BOOLEAN
+boop,1,BOOLEAN

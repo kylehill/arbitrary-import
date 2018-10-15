@@ -1,0 +1,6 @@
+"column name",width,datatype
+name,50,TEXT
+bit,1,BOOLEAN
+other_bit,1,BOOLEAN
+"just a number",1,INTEGER
+"another number, you know",1,INTEGER

@@ -1,0 +1,19 @@
+{
+  "name": "arbitrary-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js --cov"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tap": "^12.0.1"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "csv-parse": "^3.1.3",
+    "pg": "^7.5.0"
+  }
+}
