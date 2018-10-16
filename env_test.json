@@ -1,5 +1,5 @@
 {
+    "database": "arbitrary_test",
     "host": "localhost",
-    "user": "postgres",
-    "port": 5432
+    "user": "postgres"
 }

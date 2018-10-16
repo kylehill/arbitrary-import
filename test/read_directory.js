@@ -5,7 +5,7 @@ const read_directory = require("../code/read_directory")
 tap.test("Reads files in the data directory", (t) => {
 
     read_directory(path.resolve(__dirname, "../data"), (err, res) => {
-        t.equal(res.length, 3)
+        t.equal(res.length, 4)
 
         t.same(res[0], {
             name: "testformat1_2018-10-15.txt",

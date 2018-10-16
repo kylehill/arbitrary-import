@@ -12,6 +12,14 @@ tap.test("Parses data", (t) => {
             "Bar 0 -19",
             "Baz 1   2"
         ]
+    },{
+        filename: "noformat1_2018-10-15.txt",
+        format: "noformat1",
+        content: [
+            "1ABC  1",
+            "0DEF  5",
+            "0GHI  2"
+        ]
     }]
 
     const specMock = {

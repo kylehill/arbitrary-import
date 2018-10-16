@@ -1,0 +1,2 @@
+1This table shouldn't show up in the DB  500
+0Neither should this one                 600

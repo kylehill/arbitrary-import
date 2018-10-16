@@ -13,6 +13,10 @@ module.exports = (data, specs, callback) => {
     data = data.map((file) => {
         const format = specs[file.format]
 
+        if (format === undefined) {
+            return null
+        }
+
         file.data = file.content.map((line) => {
             return format.reduce((mem, column) => {
                 const raw = mem.line.substring(0, column.width)
@@ -29,6 +33,10 @@ module.exports = (data, specs, callback) => {
         })
 
         return file
+    })
+
+    data = data.filter((file) => {
+        return file !== null
     })
 
     callback(null, data)
