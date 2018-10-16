@@ -20,18 +20,18 @@ const mockData = [
         name: "test1_file.txt", 
         format: "test1", 
         data: [{
-                first: "Kyle",
-                second: true,
-                third: -143
-            },{
-                first: "John",
-                second: false,
-                third: 87
-            },{
-                first: "Calum",
-                second: false,
-                third: 0
-            }
+            first: "Kyle",
+            second: true,
+            third: -143
+        },{
+            first: "John",
+            second: false,
+            third: 87
+        },{
+            first: "Calum",
+            second: false,
+            third: 0
+        }
         ] 
     },{ 
         name: "test2_fileA.txt", 

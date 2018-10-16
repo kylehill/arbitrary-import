@@ -3,9 +3,9 @@ const async = require("async")
 
 const transformColumn = (column) => {
     const transforms = {
-        "TEXT": (col) => `varchar(${column.width})`,
-        "INTEGER": (a) => "int",
-        "BOOLEAN": (a) => "boolean"
+        "TEXT": () => `varchar(${column.width})`,
+        "INTEGER": () => "int",
+        "BOOLEAN": () => "boolean"
     }
 
     return transforms[column.datatype](column)
@@ -31,7 +31,7 @@ module.exports = (specs, data, env, callback) => {
             const timestamp = Math.floor(Date.now())
             const schemaName = `import_${timestamp}`
 
-            client.query(`CREATE SCHEMA ${schemaName}`, (err, res) => {
+            client.query(`CREATE SCHEMA ${schemaName}`, () => {
                 cb(null, schemaName)
             })
         }],
@@ -50,8 +50,8 @@ module.exports = (specs, data, env, callback) => {
                 client.query(
                     `CREATE TABLE ${schemaName}.${tableName} (${columns})`, 
                     (err, res) => {
-                    callback(err, res)
-                })
+                        callback(err, res)
+                    })
             }
 
             async.forEach(data, createTable, cb)

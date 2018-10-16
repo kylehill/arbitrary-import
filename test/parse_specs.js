@@ -1,5 +1,4 @@
 const tap = require("tap")
-const path = require("path")
 const parse_specs = require("../code/parse_specs")
 
 tap.test("Parses specs", (t) => {

@@ -50,7 +50,7 @@ tap.test("Creates tables and schema", (t) => {
 
 tap.test("Fails gracefully if client connection fails", (t) => {
     const brokenEnv = Object.assign({}, env, { database: "arbitrary_broken" })
-    create_structure(specs, data, brokenEnv, (err, schemaName) => {
+    create_structure(specs, data, brokenEnv, (err) => {
         t.same(err, { error: "Node-Postgres could not connect to server" })
         t.end()
     })

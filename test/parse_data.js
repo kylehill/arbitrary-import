@@ -1,5 +1,4 @@
 const tap = require("tap")
-const path = require("path")
 const parse_data = require("../code/parse_data")
 
 tap.test("Parses data", (t) => {
